@@ -9,7 +9,8 @@ from logging import Formatter, FileHandler
 from forms import *
 import os
 from api.api import api_blueprint
-
+from controllers.photos import photos_blueprint
+from controllers.tracking import tracking_blueprint
 #----------------------------------------------------------------------------#
 # App Config.
 #----------------------------------------------------------------------------#
@@ -53,6 +54,38 @@ if not app.debug:
 # Blueprints
 #----------------------------------------------------------------------------#
 app.register_blueprint(api_blueprint)
+app.register_blueprint(tracking_blueprint)
+app.register_blueprint(photos_blueprint)
+
+
+### Routes
+
+@app.route('/')
+def home():
+    return render_template('pages/placeholder.home.html')
+
+
+@app.route('/about')
+def about():
+    return render_template('pages/placeholder.about.html')
+
+
+@app.route('/login')
+def login():
+    form = LoginForm(request.form)
+    return render_template('forms/login.html', form=form)
+
+
+@app.route('/register')
+def register():
+    form = RegisterForm(request.form)
+    return render_template('forms/register.html', form=form)
+
+
+@app.route('/forgot')
+def forgot():
+    form = ForgotForm(request.form)
+    return render_template('forms/forgot.html', form=form)
 
 
 #----------------------------------------------------------------------------#

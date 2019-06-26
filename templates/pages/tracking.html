@@ -1,0 +1,15 @@
+{% extends 'layouts/main.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+<div class="page-header">
+  <h1>Tracking Page</h1>
+</div>
+<ul>
+    {%for photo in photos%}
+        <li><a href="{{photo}}"></a></li>
+    {% endfor %}
+</ul>
+<p>Hello World</p>
+
+{% endblock %}

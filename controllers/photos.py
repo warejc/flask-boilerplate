@@ -13,7 +13,7 @@ def get_photos():
     try:
         flickr.set_keys(api_key='#', api_secret='#')
         photos = flickr.Person.findByUserName("warejc").getPublicPhotos()
-        photo_urls = [photo.getPhotoFile(size_label="Small") for photo in photos]
+        photo_urls = [photo.getPhotoFile(size_label="Medium") for photo in photos]
     except Exception as e:
         return jsonify({'Exception': str(e)})
 

@@ -1,14 +1,20 @@
 {% extends 'layouts/main.html' %}
 {% block title %}About{% endblock %}
 {% block content %}
-
+<script src="/static/js/materialize.js"></script>
 <div class="page-header">
-  <h1>Tracking Page</h1>
+  <h2>Photos</h2>
 </div>
-<ul>
+<div class="row">
     {%for url in photo_urls%}
-        <li><img src="{{url}}"></li>
+        <div class="col s6 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{url}}">
+                </div>
+            </div>
+        </div>
     {% endfor %}
-</ul>
+</div>
 
 {% endblock %}

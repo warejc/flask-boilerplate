@@ -6,71 +6,63 @@
 <!-- meta -->
 <meta name="description" content="">
 <meta name="author" content="">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<!--Let browser know website is optimized for mobile-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!-- /meta -->
 
-<!-- styles -->
-<link type="text/css" rel="stylesheet" href="/static/css/font-awesome-4.1.0.min.css" />
-<link type="text/css" rel="stylesheet" href="/static/css/bootstrap-3.1.1.min.css">
-<link type="text/css" rel="stylesheet" href="/static/css/bootstrap-theme-3.1.1.min.css" />
-<link type="text/css" rel="stylesheet" href="/static/css/layout.main.css" />
-<link type="text/css" rel="stylesheet" href="/static/css/main.css" />
-<link type="text/css" rel="stylesheet" href="/static/css/main.responsive.css" />
-<link type="text/css" rel="stylesheet" href="/static/css/main.quickfix.css" />
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="/static/css/materialize.css"  media="screen,projection"/>
-
-<!-- /styles -->
 
 <!-- favicons -->
-<link rel="shortcut icon" href="/static/ico/favicon.png">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="/static/ico/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="/static/ico/favicon.png">
 <!-- /favicons -->
 
-<!-- scripts -->
-<script src="/static/js/libs/modernizr-2.8.2.min.js"></script>
+<!-- cookieui -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>uiCookies:Format &mdash; Free Bootstrap Theme, Free Responsive Bootstrap Website Template</title>
+<meta name="description" content="Free Bootstrap Theme by uicookies.com">
+<meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script type="text/javascript" src="/static/js/libs/jquery-1.11.1.min.js"><\/script>')</script>
-<script type="text/javascript" src="/static/js/libs/bootstrap-3.1.1.min.js" defer></script>
-<script type="text/javascript" src="/static/js/plugins.js" defer></script>
-<script type="text/javascript" src="/static/js/script.js" defer></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
-</script>
-
-<!--[if lt IE 9]><script src="/static/js/libs/respond-1.4.2.min.js"></script><![endif]-->
-<!-- /scripts -->
+<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/styles-merged.css">
+<link rel="stylesheet" href="/static/css/style.min.css">
+<link rel="stylesheet" href="/static/css/custom.css">
 
 </head>
 <body>
 
   <!-- Wrap all page content here -->
   <div id="wrap">
+  <!-- START: header -->
+  <header role="banner" class="probootstrap-header">
+      <div class="container-fluid">
+          <a href="#" class="probootstrap-logo">Format<span>.</span></a>
 
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="left hide-on-med-and-down">
-        <li {% if request.endpoint == 'home' %} class="active" {% endif %}><a href="/photos">Home</a></li>
-        <li {% if request.endpoint == 'home' %} class="active" {% endif %}><a href="/tracking">Tracking</a></li>
-        <li {% if request.endpoint == 'about' %} class="active" {% endif %}><a href="{{ url_for('about') }}">About</a></li>
-      </ul>
-    </div>
-  </nav>
+          <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
+          <div class="mobile-menu-overlay"></div>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li {% if request.endpoint == 'home' %} class="active" {% endif %}><a href="/photos">Home</a></li>
-    <li {% if request.endpoint == 'home' %} class="active" {% endif %}><a href="/tracking">Tracking</a></li>
-  </ul>    <!-- Fixed navbar -->
+          <nav role="navigation" class="probootstrap-nav hidden-xs">
+            <ul class="probootstrap-main-nav">
+              <li><a href="/photos/folio">Home</a></li>
+              <li class="active"><a href="/photos/folio">Portfolio</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="extra-text visible-xs">
+              <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+              <h5>Social</h5>
+              <ul class="social-buttons">
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                <li><a href="#"><i class="icon-instagram2"></i></a></li>
+              </ul>
+              <p><small>&copy; Copyright 2017 uiCookies:Format. All Rights Reserved.</small></p>
+            </div>
+          </nav>
+      </div>
+    </header>
+    <!-- END: header -->
 
     <!-- Begin page content -->
     <main id="content" role="main" class="container">
